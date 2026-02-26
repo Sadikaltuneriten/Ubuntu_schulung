@@ -1,30 +1,41 @@
-cat << 'EOF' > setup_game.sh
+cat << 'EOF' > setup_game_v2.sh
 #!/bin/bash
-# Spiel-Setup: Die Suche nach dem Geheimnis
-
 BASE="Terminal_Challenge"
+rm -rf $BASE
 mkdir -p $BASE
 cd $BASE
 
-# 15+ verschachtelte Ordner mit wirren Namen erstellen
-mkdir -p a/b/c/d/e/geheimnis/f/g/h
-mkdir -p x/y/z/ordner1/ordner2/ziel
-mkdir -p 1/2/3/4/5/6/7/8/9/treffer
-mkdir -p omega/alpha/beta/gamma/delta
+# 20 Ordner mit wirren Pfaden erstellen
+paths=(
+  "alpha/beta/gamma/delta"
+  "system/logs/backup/old"
+  "users/admin/documents/private"
+  "var/tmp/cache/sessions"
+  "mnt/external/drive/data"
+  "1/2/3/4/5/6/7/8/9"
+)
 
-# Überall "Müll-Dateien" verteilen
-for d in $(find . -type d); do
-    echo "Hier ist nur Staub..." > "$d/staub.txt"
-    echo "Suche weiter!" > "$d/hinweis.txt"
+for p in "${paths[@]}"; do
+    mkdir -p "$p"
+    # Erstelle in jedem Ordner 3-5 Dummy-Dateien mit Zufallsnamen
+    for i in {1..4}; do
+        echo "Nichts zu sehen in Datei $i..." > "$p/file_$RANDOM.txt"
+    done
 done
 
-# Die versteckte Zieldatei anlegen (mit einem Punkt am Anfang)
-# Nur grep kann den Inhalt finden!
-SECRET_DIR="1/2/3/4/5/6/7/8/9/treffer"
-echo "HERZLICHEN GLUECKWUNSCH! Das Passwort lautet: SAMBA_PRO_2026" > "$SECRET_DIR/.geheimnis.txt"
+# Die ECHTE Zieldatei an einem fiesen Ort verstecken
+# Der Dateiname verrät NICHTS!
+TARGET_DIR="1/2/3/4/5/6/7/8/9"
+echo "HERZLICHEN GLUECKWUNSCH! Das Passwort für Samba lautet: KURS_ERFOLG_2026" > "$TARGET_DIR/info_$(date +%s).txt"
 
-echo "Setup abgeschlossen! Der Ordner 'Terminal_Challenge' wurde erstellt."
+# Ein paar falsche Fährten (Fallen) einbauen
+echo "Das ist eine Falle! Suche weiter nach dem echten 'Passwort'." > "system/logs/backup/old/note.txt"
+
+echo "--------------------------------------------------"
+echo "Setup fertig! Die Challenge ist im Ordner: $BASE"
+echo "Aufgabe: Findet das Wort 'Passwort' im INHALT aller Dateien."
+echo "--------------------------------------------------"
 EOF
 
-chmod +x setup_game.sh
-./setup_game.sh
+chmod +x setup_game_v2.sh
+./setup_game_v2.sh
