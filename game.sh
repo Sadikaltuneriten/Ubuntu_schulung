@@ -22,7 +22,7 @@ done
 
 # 4. Der HINWEIS-Befehl (Schritt 1 der Suche)
 # Sie müssen nach "ENTPACKEN" suchen, um den Befehl zu finden
-echo "Nutze diesen Befehl: unzip geheimnis.zip" > "sys/kernel/debug/hinweis.txt"
+echo "Nutze diesen Befehl zum entpacken: unzip geheimnis.zip" > "sys/kernel/debug/hinweis.txt"
 
 # 5. Das PASSWORT (Schritt 2 der Suche)
 # Sie müssen nach "PASSWORT" suchen
