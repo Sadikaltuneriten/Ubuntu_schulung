@@ -31,6 +31,3 @@ echo "2. Findet das Passwort (Suche nach 'PASSWORT')"
 echo "3. Entpackt die Datei 'geheimnis.zip' im Hauptordner."
 echo "--------------------------------------------------------"
 EOF
-
-chmod +x setup_game_final.sh
-./setup_game_final.sh
