@@ -8,10 +8,6 @@ cd $BASE
 # 1. Die Belohnung vorbereiten (Eine Datei, die sie entpacken sollen)
 echo "BRAVO! Du hast den Kurs gerockt. Hier ist dein digitales Zertifikat: [SAMBA-MASTER-2026]" > belohnung/erfolg.txt
 
-# 2. Die ZIP-Datei mit Passwort erstellen (Passwort: SAMBA_PRO_26)
-# Wir nutzen 'zip', falls nicht installiert: sudo apt install zip -y
-zip -r -P "SAMBA_PRO_26" geheimnis.zip belohnung/
-rm -rf belohnung/  # Das Original löschen, damit sie entpacken MÜSSEN
 
 # 3. Verschachtelte Ordner für die Suche erstellen
 paths=("sys/kernel/debug" "home/user/hidden" "var/mail/inbox")
