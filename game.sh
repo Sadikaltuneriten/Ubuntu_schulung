@@ -1,4 +1,3 @@
-cat << 'EOF' > setup_game.sh
 #!/bin/bash
 # Spiel-Setup: Die Suche nach dem Geheimnis
 
