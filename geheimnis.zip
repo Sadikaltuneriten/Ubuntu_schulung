@@ -1,0 +1,35 @@
+Wochenübersicht: Linux-Administration & Netzwerk-Grundlagen
+Montag: Grundlagen & Virtualisierung
+
+Theorie: Philosophie von Open Source vs. proprietärer Software.
+
+Praxis: Einführung in den Hypervisor (Hyper-V) & Installation von Ubuntu Desktop.
+
+Shell: Erste Orientierung im Terminal und grundlegende Navigation.
+
+
+Dienstag: Server-Setup & Shell-Mastery
+
+Installation: Setup einer zweiten VM (Ubuntu Server ohne GUI).
+
+Shell-Kunde: Vergleich verschiedener Shell-Arten (bash vs. fish) & Shell-Wechsel (chsh).
+
+Werkzeugkasten: Vertiefung der Core-Utilities (ls, touch, mkdir, pwd, man, --help).
+
+Datenströme: Einführung in Pipes (|) und Umleitungen (>, >>) sowie Textsuche mit grep.
+
+
+Mittwoch: Festigung & Praxis
+
+Transfer: Umfassendes Recap der ersten zwei Tage.
+
+Übungen: Selbstständiges Lösen von Aufgaben zur Festigung der Shell-Befehle und Systemadministration.
+
+
+Donnerstag: Web-Services & Dateifreigaben
+
+Webserver: Deployment eines schnellen Webservers mittels Python.
+
+Datenbanken: Einführung in SQLite3; Auslesen und Darstellen von DB-Inhalten auf dem Webserver.
+
+Filesharing: Einstieg in die Samba-Konfiguration für plattformübergreifenden Dateiaustausch.
