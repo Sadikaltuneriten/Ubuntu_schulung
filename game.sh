@@ -22,7 +22,7 @@ echo "Nutze diesen Befehl zum entpacken: unzip geheimnis.zip" > "sys/kernel/debu
 
 # 5. Das PASSWORT (Schritt 2 der Suche)
 # Sie müssen nach "PASSWORT" suchen
-echo "Das Passwort lautet: SAMBA_PRO_26" > "home/user/hidden/.pass.txt"
+echo "Das Passwort lautet: SAMBA_PRO26" > "home/user/hidden/.pass.txt"
 
 echo "--------------------------------------------------------"
 echo "DIE CHALLENGE STARTET JETZT!"
